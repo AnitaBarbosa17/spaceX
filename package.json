@@ -1,5 +1,5 @@
 {
-  "name": "pokemon",
+  "name": "spacexLaunches",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,13 +11,12 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run watch:css && react-scripts start",
+    "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "eject": "react-scripts eject",
+    "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
+    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
   },
   "browserslist": {
     "production": [
@@ -30,5 +29,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@apollo/react-hooks": "^3.1.5",
+    "apollo-boost": "^0.4.9",
+    "autoprefixer": "^9.8.5",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.10.4",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.5.1"
   }
 }
