@@ -6,7 +6,7 @@ import { LaunchPast } from '../components/LaunchPast';
 
 export function LaunchesContainer() {
     const {loading, error, data} = useQuery(GET_LAUNCHES, {
-        variables: { limit: 10 }
+        variables: { limit: 12 }
     });
     
 
@@ -15,9 +15,12 @@ export function LaunchesContainer() {
     else
     console.log(data)
     return (
-        <div className="container">
-            {data.launchesPast.map(launch => <LaunchPast key={launch.mission_name} launch={launch} />)}
-        </div>
+        
+            < div className = "container mx-auto px-10">
+                < div className = "grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {data.launchesPast.map(launch => <LaunchPast key={launch.mission_name} launch={launch} />)}
+                </div>
+            </div>
     )
     
 }
