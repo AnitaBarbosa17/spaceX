@@ -39,6 +39,9 @@ const Header = styled.header`
     @media (min-width: 768px) {
         height: 60vh;
     }
+    @media (min-width: 1024px) {
+        height: calc(100vh - 50px);
+    }
 `;
 
 const Image = styled.img`
@@ -50,6 +53,11 @@ const Image = styled.img`
     z-index: 0;
     @media (min-width: 768px) {
         height: 80vh;
+    }
+    @media (min-width: 1024px) {
+        height: 100vh;
+        min-width: 100%;
+        left: 50%;
     }
 `;
 

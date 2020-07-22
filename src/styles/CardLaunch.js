@@ -6,8 +6,9 @@ export const Container = styled.div`
     padding: 0 .8rem;
     margin: 1rem 0;
     overflow: hidden;
+    transition: all 0.1s ease-in-out;
     @media (min-width: 768px) {
-        width: 25%;
+        width: 33.333%;
         height: 24vw;
         &:hover{
             .card__more{
@@ -18,6 +19,9 @@ export const Container = styled.div`
                 }
             }
         }
+    }
+    @media(min-width: 1024px) {
+        width: 25%;
     }
     
     .wrapper{
@@ -140,6 +144,8 @@ export const More = styled.div`
         transition: all 0.1s ease-in-out;
         overflow: hidden;
         padding: 20px;
+        right: 0;
+        top: 0;
         div{
             transition: all 0.1s ease-in-out;
             transform: scale(.3);
@@ -157,6 +163,7 @@ export const More = styled.div`
             display: block;
         }
     }
+
     div{
         transition: all 0.1s ease-in-out;
         transition-delay: .08s;
