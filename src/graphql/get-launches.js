@@ -14,5 +14,16 @@ export const GET_LAUNCHES = gql `
             launch_year
             id
         }
+        company {
+            name
+            links {
+                elon_twitter
+                twitter
+                website
+                flickr
+            }
+            founder
+            summary
+        }
     }
 `
