@@ -65,6 +65,9 @@ const Header = styled.header`
         position: absolute;
         z-index: 1;
     }
+    @media (min-width: 1024px) {
+        height: calc(100vh - 50px);
+    }
 `;
 
 const Image = styled.img`
@@ -74,8 +77,14 @@ const Image = styled.img`
     left: 50%;
     transform: translateX(-50%);
     z-index: 0;
+    object-fit: cover;
     @media (min-width: 768px) {
         height: 80vh;
+    }
+    @media (min-width: 1024px) {
+        height: 100vh;
+        min-width: 100%;
+        left: 50%;
     }
 `;
 
@@ -99,13 +108,21 @@ const Container = styled.div`
                 height: 60vh;
                 order: 1;
             }
+            @media (min-width: 1024px){
+                height: auto;
+            }
             img{
                 width: 100%;
+                object-fit: cover;
                 @media (min-width: 768px) {
                     left: -60%;
                     height: 100%;
                     width: auto;
                     position: absolute;
+                }
+                @media (min-width: 1024px) {
+                    left: 0;
+                    min-height: 100%;
                 }
                 
             }
@@ -121,12 +138,18 @@ const Container = styled.div`
                 order: 2;
                 background: transparent;
             }
+            @media (min-width: 1024px){
+                padding: 7vh 8% 7vh 4%;
+            }
             p{
                 margin-top: 3vh;
                 font-size: 1rem;
                 text-align: right;
                 @media (min-width: 768px) {
                     font-size: 1.15rem;
+                }
+                @media (min-width: 768px) {
+                    font-size: 1rem;
                 }
             }
             blockquote{
@@ -165,7 +188,7 @@ const About = () => {
             </Header>
             <Container>
                 <div>
-                    <img src="/images/musk.jpg" alt="Logo"/> 
+                    <img src="/images/elon-musk.jpg" alt="Logo"/> 
                 </div>
                 <div>
                     <Text>

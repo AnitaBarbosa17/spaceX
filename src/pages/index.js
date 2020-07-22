@@ -51,6 +51,7 @@ const Image = styled.img`
     left: 70%;
     transform: translateX(-50%);
     z-index: 0;
+    object-fit: cover;
     @media (min-width: 768px) {
         height: 80vh;
     }
