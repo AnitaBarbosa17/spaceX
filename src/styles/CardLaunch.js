@@ -31,6 +31,7 @@ export const Container = styled.div`
         background-color: black;
         position: relative;
         height: 100%;
+        overflow: wrapper;
     }
     
 `;
@@ -42,7 +43,7 @@ export const Body = styled.div`
     min-height: 1px;
     padding: 1.25rem;
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     width: 100%;
     background: rgb(16 16 27);
     background: linear-gradient(0deg,rgb(16 16 27) 0%,rgba(255,255,255,0) 100%);
@@ -135,6 +136,9 @@ export const More = styled.div`
     position: absolute;
     right: 10px;
     top: 10px;
+    .card__title{
+        display: none;
+    }
     @media (min-width: 768px) {
         opacity: 0;
         display: flex;
@@ -166,7 +170,6 @@ export const More = styled.div`
             display: block;
         }
     }
-
     div{
         transition: all 0.1s ease-in-out;
         transition-delay: .08s;
@@ -185,8 +188,6 @@ export const More = styled.div`
             }
         }
     }
-    .card__title{
-        display: none;
-    }
+    
     
 `;
