@@ -121,6 +121,9 @@ export const LinkTo = styled.a`
     &:hover {
         transform: scale(1.1);
     }
+    &.hide{
+        display: none;
+    }
 `;
 
 export const More = styled.div`
@@ -177,6 +180,9 @@ export const More = styled.div`
             text-align: center;
             color: white;
             margin-top: 10px;
+            &.hide{
+                display: none;
+            }
         }
     }
     .card__title{

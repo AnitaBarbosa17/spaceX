@@ -37,11 +37,15 @@ const CardLaunch = ({ launch, loading, classes, children, ...restProps }) => {
                         <CardLaunch.Title>
                             <span>Mission Name</span>
                             {launch.mission_name}</CardLaunch.Title>
-                        <CardLaunch.LinkTo href={launch.links.wikipedia} target="_blank" rel="noopener noreferrer" className="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">
+                        <CardLaunch.LinkTo 
+                            href={launch.links.wikipedia} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className={(launch.links.wikipedia == null ? 'hide' : 'show')}>
                             <MoreRocket />
                             
                         </CardLaunch.LinkTo> 
-                        <span>More Info</span>
+                        <span className={(launch.links.wikipedia == null ? 'hide' : 'show')}>More Info</span>
                     </div>
                 </CardLaunch.More>
             </div>
